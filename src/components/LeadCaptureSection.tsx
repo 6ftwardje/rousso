@@ -20,6 +20,7 @@ export function LeadCaptureSection() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -32,12 +33,46 @@ export function LeadCaptureSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(null);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      const response = await fetch('https://formspree.io/f/xqaykvqb', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          experience: formData.experience,
+          preferredTime: formData.preferredTime,
+          message: formData.message,
+          _subject: 'Nieuwe Strategie Call Aanvraag - Rousso van Hoorn',
+          _replyto: formData.email,
+        }),
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          experience: "",
+          preferredTime: "",
+          message: "",
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitError('Er is een fout opgetreden bij het versturen van je aanvraag. Probeer het opnieuw of neem direct contact op.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const experienceLevels = [
@@ -223,6 +258,13 @@ export function LeadCaptureSection() {
                       rows={4}
                     />
                   </div>
+
+                  {/* Error Message */}
+                  {submitError && (
+                    <div className="bg-red-600/20 border border-red-500/30 rounded-lg p-4 mb-4">
+                      <p className="text-red-400 text-sm">{submitError}</p>
+                    </div>
+                  )}
 
                   <CTAButton
                     type="submit"
