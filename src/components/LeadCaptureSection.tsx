@@ -308,23 +308,6 @@ export function LeadCaptureSection() {
               </CardContent>
             </Card>
 
-            <Card className="bg-blue-600/20 border-blue-500/30">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-white mb-4">
-                  Waarom een Strategie Call?
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  Trading is meer dan alleen technische analyse. Het gaat om psychologie, 
-                  discipline en een systematische aanpak. Tijdens deze call krijg je:
-                </p>
-                <ul className="text-gray-300 space-y-2">
-                  <li>• Persoonlijke aandacht voor jouw situatie</li>
-                  <li>• Bewezen strategieën die werken</li>
-                  <li>• Inzicht in veelgemaakte fouten</li>
-                  <li>• Duidelijke vervolgstappen</li>
-                </ul>
-              </CardContent>
-            </Card>
           </motion.div>
         </div>
       </div>
