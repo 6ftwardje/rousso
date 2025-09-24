@@ -11,6 +11,8 @@ interface CTAButtonProps {
   className?: string;
   onClick?: () => void;
   href?: string;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
 export function CTAButton({
@@ -20,6 +22,8 @@ export function CTAButton({
   className,
   onClick,
   href,
+  type = "button",
+  disabled = false,
 }: CTAButtonProps) {
   const baseClasses = "font-semibold transition-all duration-300 hover:scale-105";
   
@@ -42,6 +46,8 @@ export function CTAButton({
       transition={{ type: "spring", stiffness: 400, damping: 17 }}
     >
       <Button
+        type={type}
+        disabled={disabled}
         className={cn(
           baseClasses,
           variantClasses[variant],
