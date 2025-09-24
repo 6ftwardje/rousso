@@ -34,7 +34,6 @@ export function Navigation() {
   const navItems = [
     { label: "Over Rousso", href: "#about" },
     { label: "Mijn Methode", href: "#method" },
-    { label: "Resultaten", href: "#results" },
     { label: "Veelgestelde Vragen", href: "#faq" },
     { label: "Contact", href: "#contact" },
   ];

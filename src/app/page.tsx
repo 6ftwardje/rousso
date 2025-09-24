@@ -92,60 +92,6 @@ export default function Home() {
       
       <HeroSection />
       
-      {/* Social Proof Section */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Bewezen Resultaten
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Echte traders, echte resultaten. Zie hoe mijn studenten hun trading hebben getransformeerd.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {testimonials.map((testimonial, index) => (
-              <TestimonialCard
-                key={index}
-                {...testimonial}
-              />
-            ))}
-          </div>
-
-          {/* Performance Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-          >
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">85%</div>
-              <div className="text-gray-400">Succesvolle Trades</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">200+</div>
-              <div className="text-gray-400">Studenten Gecoacht</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-yellow-400 mb-2">8</div>
-              <div className="text-gray-400">Jaren Ervaring</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">70%</div>
-              <div className="text-gray-400">Succesvolle Studenten</div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Problem - Process - Proof Section */}
       <section id="method" className="py-20 bg-black">
