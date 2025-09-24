@@ -9,7 +9,7 @@ import { FAQAccordion } from "@/components/FAQAccordion";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { TrendingUp, Shield, Brain, Target, Users, Award } from "lucide-react";
+import { TrendingUp, Shield, Brain, Target } from "lucide-react";
 
 export default function Home() {
   // FAQ Data

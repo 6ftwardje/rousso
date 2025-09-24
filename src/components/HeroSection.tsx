@@ -2,7 +2,7 @@
 
 import { CTAButton } from "./CTAButton";
 import { motion } from "framer-motion";
-import { TrendingUp, Users, Award } from "lucide-react";
+import { Award } from "lucide-react";
 
 export function HeroSection() {
   const scrollToContact = () => {
@@ -11,11 +11,6 @@ export function HeroSection() {
     });
   };
 
-  const scrollToAbout = () => {
-    document.getElementById("about")?.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">

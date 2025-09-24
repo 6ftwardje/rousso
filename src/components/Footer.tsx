@@ -198,7 +198,7 @@ export function Footer() {
           className="mt-8 p-4 bg-yellow-600/20 border border-yellow-500/30 rounded-lg"
         >
           <p className="text-yellow-200 text-sm text-center">
-            <strong>Risico Disclaimer:</strong> Trading brengt aanzienlijke risico's met zich mee en kan leiden tot verlies van kapitaal. 
+            <strong>Risico Disclaimer:</strong> Trading brengt aanzienlijke risico&apos;s met zich mee en kan leiden tot verlies van kapitaal. 
             Alle informatie op deze website is alleen voor educatieve doeleinden en vormt geen financieel advies. 
             Handel altijd op eigen risico en overweeg professioneel advies voordat je handelt.
           </p>

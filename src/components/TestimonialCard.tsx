@@ -3,6 +3,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
+import Image from "next/image";
 
 interface TestimonialCardProps {
   name: string;
@@ -33,9 +34,11 @@ export function TestimonialCard({
         <CardContent className="p-6">
           <div className="flex items-center mb-4">
             {image && (
-              <img
+              <Image
                 src={image}
                 alt={name}
+                width={48}
+                height={48}
                 className="w-12 h-12 rounded-full object-cover mr-4"
               />
             )}
@@ -52,7 +55,7 @@ export function TestimonialCard({
           </div>
           
           <blockquote className="text-gray-300 italic">
-            "{content}"
+            &ldquo;{content}&rdquo;
           </blockquote>
         </CardContent>
       </Card>

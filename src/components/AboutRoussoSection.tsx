@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { CTAButton } from "./CTAButton";
 import { TrendingUp, Brain, Shield, Users } from "lucide-react";
+import Image from "next/image";
 
 export function AboutRoussoSection() {
   const scrollToContact = () => {
@@ -64,9 +65,11 @@ export function AboutRoussoSection() {
             className="space-y-6"
           >
             <div className="relative">
-              <img
+              <Image
                 src="/profilepic.jpg"
                 alt="Rousso van Hoorn"
+                width={800}
+                height={400}
                 className="w-full h-96 object-cover rounded-lg shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent rounded-lg"></div>
