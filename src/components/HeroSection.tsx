@@ -64,41 +64,12 @@ export function HeroSection() {
             strategieën met ambitieuze traders zoals jij.
           </motion.p>
 
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-8 mb-12"
-          >
-            <div className="flex items-center text-center">
-              <TrendingUp className="w-6 h-6 text-green-400 mr-2" />
-              <div>
-                <div className="text-2xl font-bold text-white">85%</div>
-                <div className="text-sm text-gray-400">Succesvolle Trades</div>
-              </div>
-            </div>
-            <div className="flex items-center text-center">
-              <Users className="w-6 h-6 text-blue-400 mr-2" />
-              <div>
-                <div className="text-2xl font-bold text-white">200+</div>
-                <div className="text-sm text-gray-400">Studenten Gecoacht</div>
-              </div>
-            </div>
-            <div className="flex items-center text-center">
-              <Award className="w-6 h-6 text-yellow-400 mr-2" />
-              <div>
-                <div className="text-2xl font-bold text-white">8</div>
-                <div className="text-sm text-gray-400">Jaren Ervaring</div>
-              </div>
-            </div>
-          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <CTAButton
@@ -123,7 +94,7 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 0.8 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
             className="mt-16 text-sm text-gray-400"
           >
             <p>✓ Gratis strategie consultatie</p>
