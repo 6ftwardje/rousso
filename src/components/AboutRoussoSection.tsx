@@ -65,7 +65,7 @@ export function AboutRoussoSection() {
           >
             <div className="relative">
               <img
-                src="/roussa-profile.jpg"
+                src="/profilepic.jpg"
                 alt="Rousso van Hoorn"
                 className="w-full h-96 object-cover rounded-lg shadow-2xl"
               />
@@ -148,3 +148,4 @@ export function AboutRoussoSection() {
     </section>
   );
 }
+

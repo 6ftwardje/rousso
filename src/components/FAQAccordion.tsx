@@ -46,3 +46,4 @@ export function FAQAccordion({ items, className }: FAQAccordionProps) {
     </motion.div>
   );
 }
+
